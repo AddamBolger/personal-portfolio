@@ -1,3 +1,5 @@
+/* Hi welcome to my style sheet, you'll find little messages like this dotted around here */
+
 body {
     background-color: #fefefe;
     font-family: 'Poppins', sans-serif;
@@ -51,7 +53,7 @@ a {
     padding: .5em 0;
     border: 1px solid #A2A2A2;
     background-color: #FFFFFF;
-    /* Box shadow and border radius for different browsers*/
+    /* Box shadow for different browsers*/
     -webkit-box-shadow: 0px 0px 10px 0px;
     -moz-box-shadow: 0px 0px 10px 0px;
     box-shadow: 0px 0px 10px 0px;
@@ -161,17 +163,57 @@ main {
     margin: 0.8em 0;
 }
 
+/* about me page - so you know who I am */
+
 .about-me__image img {
     max-width: 100%;
 }
 
-section.about-me__skills {
-    margin: 5em 0;
+section.about-me__skills-top {
+    margin: 5em 0 10em 0;
 }
 
-.about-me__skills h2 {
+.about-me__skills-top h2 {
     margin-top: 0.1em;
 }
+
+.more-skills h3 {
+    margin-top: 5em;
+}
+
+.more-skills a {
+    background: linear-gradient(45deg, #9F2D2D, #FF4343);
+    color: white;
+    padding: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.more-skills a:hover,
+.more-skills a:active {
+    background: white;
+    color: #CC3636;
+    border: 1px solid #CC3636;
+}
+
+/* CV stylings */
+
+.cv__contact-info a {
+    border-bottom: 5px solid #CC3636;
+    color: #000;
+    transition: ease-in-out 0.3s;
+}
+
+.cv__contact-info a:hover,
+.cv__contact-info a:active {
+    background: linear-gradient(45deg, #9F2D2D, #FF4343);
+    color: white;
+    border-bottom: none;
+}
+
+ .cv-container {
+    margin-right: 10%;
+} 
+
 
 
 @media screen and (min-width: 320px) {
@@ -180,7 +222,7 @@ section.about-me__skills {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
 
     .page-intro {
         margin-left: 3em;
@@ -223,6 +265,25 @@ section.about-me__skills {
     .flex-container--skills div:not(:first-child) {
         margin-left: 5em;
     }
+
+    .more-skills h3{
+        margin-top: 0;
+    }
+
+    .flex-container--cv {
+        display: flex;
+
+    }
+    
+    .cv__left-column {
+        flex: 20%;
+        margin-right: 5em;
+    }
+    
+    .cv__right-column {
+        flex: 80%;
+        margin-right: 10%;
+    }
 }
 
 @media screen and (min-width: 850px) {
@@ -232,5 +293,11 @@ section.about-me__skills {
 
     .page-intro {
         max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .cv__right-column {
+        margin-right: 20%;
     }
 }
