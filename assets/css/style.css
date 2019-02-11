@@ -230,10 +230,17 @@ section.about-me__skills-top {
 
 .client-project {
     margin-top: 5em;
+    border: 1px solid #222;
+    padding: 10px;
+    box-shadow: -2px 1px 6px #222;
+}
+
+.client-project img {
+    border: 1px solid #222;
 }
 
 .client-project h2 {
-    margin-bottom: 0.1em;
+    margin: 0.1em 0;
 }
 
 .client-project p {
@@ -244,6 +251,39 @@ section.about-me__skills-top {
     width: 100%;
     height: auto;
 }
+
+/* === Client sub pages === */
+
+/* breadcrumb styling */
+
+.root {
+    color: #FF4343;
+}
+
+.root:hover {
+    color: #CC3636;
+}
+
+.project-information__image img {
+    width: 100%;
+}
+
+.project-information__link a {
+    display: inline-block;
+    background: linear-gradient(45deg, #9F2D2D, #FF4343);
+    padding: 10px 15px;
+    color: white;
+    text-shadow: 1px 1px 1px #222;
+    border: 1px solid #CC3636;
+    transition: ease .3s;
+    margin-top: 20px;
+}
+
+.project-information__link a:hover {
+    background: white;
+    color: #CC3636;
+}
+
 /* Blogs styling - making my ramblings look professional */
 .blog-item {
     margin-right: auto;
@@ -263,7 +303,8 @@ section.about-me__skills-top {
 }
 
 /* ===== Contact form styling ===== */
-
+/* Getting in touch has never been easier, just drop me a line hello@addambolger.co.uk and we can chat about anything
+work, design, how I messed something up, nerdy stuff.... plz i need friends */
 label {
     display: block;
     padding-bottom: 0.2em;
@@ -379,10 +420,42 @@ input[type="submit"]:hover {
         margin-right: 10%;
     }
 
-    .client-project img {
-        width: 75%;
+    .portfolio__client-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 85%;
+        margin-left: 0em;
     }
 
+    .client-project {
+        flex: 40%;
+        margin-right: 2em;
+        max-width: 50%;
+    }
+
+    .client-project img {
+        width: 100%;
+    }
+
+    .client-project__caption {
+        color: #222;
+    }
+
+    .client-project__caption p {
+        color: rgb(46, 46, 46);
+    }
+
+    .project-information {
+        display: flex;
+    }
+
+    .project-information__body,
+    .project-information__image {
+        flex: 50%;
+        margin-right: 2em;
+    }
+
+/* blogs */
     .blog-post__container {
         display: flex;
         margin-right: 2em;
